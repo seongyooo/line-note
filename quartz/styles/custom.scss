@@ -1,3 +1,114 @@
-@use "./base.scss";
+/* ================================
+   Line Note - 커스텀 스타일
+   미니멀 + 한국어 최적화
+================================ */
 
-// put your custom CSS here!
+/* 전체 폰트 최적화 */
+* {
+  word-break: keep-all;
+  line-height: 1.8;
+}
+
+/* 본문 가독성 */
+article {
+  font-size: 1rem;
+  letter-spacing: -0.01em;
+}
+
+/* 헤더 스타일 */
+h1, h2, h3, h4 {
+  font-weight: 700;
+  letter-spacing: -0.03em;
+  margin-top: 2rem;
+  margin-bottom: 0.75rem;
+}
+
+h1 { font-size: 1.75rem; }
+h2 {
+  font-size: 1.3rem;
+  border-bottom: 1px solid var(--lightgray);
+  padding-bottom: 0.4rem;
+}
+h3 { font-size: 1.1rem; }
+
+/* 코드 블록 */
+pre {
+  border-radius: 8px !important;
+  font-size: 0.85rem !important;
+  padding: 1.2rem !important;
+}
+
+code {
+  font-size: 0.85em;
+  border-radius: 4px;
+  padding: 0.15em 0.4em;
+}
+
+/* 인용구 */
+blockquote {
+  border-left: 3px solid var(--secondary);
+  background: var(--highlight);
+  border-radius: 0 6px 6px 0;
+  padding: 0.75rem 1rem;
+  margin: 1rem 0;
+  font-style: normal;
+}
+
+/* 테이블 */
+table {
+  border-collapse: collapse;
+  width: 100%;
+  font-size: 0.9rem;
+}
+
+th {
+  background: var(--lightgray);
+  font-weight: 600;
+  padding: 0.6rem 1rem;
+}
+
+td {
+  padding: 0.5rem 1rem;
+  border-bottom: 1px solid var(--lightgray);
+}
+
+/* 링크 */
+a {
+  text-decoration: none;
+  transition: color 0.15s ease;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+/* 페이지 제목 (사이드바) */
+#quartz-body .sidebar .logo {
+  font-weight: 800;
+  font-size: 1.1rem;
+  letter-spacing: -0.04em;
+}
+
+/* 탐색바 깔끔하게 */
+.search {
+  border-radius: 8px !important;
+}
+
+/* 태그 스타일 */
+.tag-link {
+  border-radius: 4px !important;
+  font-size: 0.75rem !important;
+  padding: 0.2em 0.6em !important;
+}
+
+/* 목차 */
+.toc {
+  font-size: 0.85rem;
+}
+
+/* 페이지 하단 여백 */
+footer {
+  margin-top: 4rem;
+  font-size: 0.8rem;
+  opacity: 0.5;
+}

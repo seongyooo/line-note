@@ -1,20 +1,13 @@
 import { QuartzConfig } from "./quartz/cfg"
 import * as Plugin from "./quartz/plugins"
 
-/**
- * Quartz 4 Configuration
- *
- * See https://quartz.jzhao.xyz/configuration for more information.
- */
 const config: QuartzConfig = {
   configuration: {
     pageTitle: "Line Note",
     pageTitleSuffix: "",
     enableSPA: true,
     enablePopovers: true,
-    analytics: {
-      provider: "plausible",
-    },
+    analytics: null,
     locale: "ko-KR",
     baseUrl: "seongyooo.github.io/line-note",
     ignorePatterns: ["private", "templates", ".obsidian"],
@@ -23,32 +16,32 @@ const config: QuartzConfig = {
       fontOrigin: "googleFonts",
       cdnCaching: true,
       typography: {
-        header: "Schibsted Grotesk",
-        body: "Source Sans Pro",
-        code: "IBM Plex Mono",
+        header: "Noto Sans KR",   // 한국어 헤더
+        body: "Noto Sans KR",     // 한국어 본문
+        code: "JetBrains Mono",   // 코드 블록
       },
       colors: {
         lightMode: {
-          light: "#faf8f8",
-          lightgray: "#e5e5e5",
-          gray: "#b8b8b8",
-          darkgray: "#4e4e4e",
-          dark: "#2b2b2b",
-          secondary: "#284b63",
-          tertiary: "#84a59d",
-          highlight: "rgba(143, 159, 169, 0.15)",
-          textHighlight: "#fff23688",
+          light: "#ffffff",        // 배경 (순백)
+          lightgray: "#f0f0f0",   // 서브 배경
+          gray: "#b8b8b8",        // 경계선
+          darkgray: "#4a4a4a",    // 본문 텍스트
+          dark: "#1a1a1a",        // 헤더 텍스트
+          secondary: "#3d7ebf",   // 링크 / 포인트 색상 (차분한 블루)
+          tertiary: "#6aabf7",    // hover 색상
+          highlight: "rgba(61, 126, 191, 0.08)",  // 하이라이트 배경
+          textHighlight: "#fff176aa",              // 텍스트 마커
         },
         darkMode: {
-          light: "#161618",
-          lightgray: "#393639",
-          gray: "#646464",
-          darkgray: "#d4d4d4",
-          dark: "#ebebec",
-          secondary: "#7b97aa",
-          tertiary: "#84a59d",
-          highlight: "rgba(143, 159, 169, 0.15)",
-          textHighlight: "#b3aa0288",
+          light: "#1a1a1a",        // 배경 (딥 다크)
+          lightgray: "#242424",   // 서브 배경
+          gray: "#555555",        // 경계선
+          darkgray: "#cccccc",    // 본문 텍스트
+          dark: "#f0f0f0",        // 헤더 텍스트
+          secondary: "#6aabf7",   // 링크 / 포인트 색상 (밝은 블루)
+          tertiary: "#93c4f9",    // hover 색상
+          highlight: "rgba(106, 171, 247, 0.1)",  // 하이라이트 배경
+          textHighlight: "#b3aa0288",              // 텍스트 마커
         },
       },
     },
@@ -88,7 +81,6 @@ const config: QuartzConfig = {
       Plugin.Static(),
       Plugin.Favicon(),
       Plugin.NotFoundPage(),
-      // Comment out CustomOgImages to speed up build time
       Plugin.CustomOgImages(),
     ],
   },
